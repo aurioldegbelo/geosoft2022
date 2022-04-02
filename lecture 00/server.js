@@ -2,7 +2,7 @@
 // (Note: if modules are used, an express server would be more appropriate)
 const http = require('http')
 const fs = require ('fs')
-const port = 5000
+const port = 3000
 
 console.clear()
 
@@ -10,8 +10,8 @@ const server = http.createServer(function (req, res)
 {
   
     // return a file as a response
-    fs.readFile('./example01.html', function(err, data) 
-    fs.readFile('./hellofromserver.html', function(err, data) 
+    fs.readFile('./demo.html', function(err, data) 
+    //fs.readFile('./hellofromserver.html', function(err, data) 
     {
 
         if (err) 
