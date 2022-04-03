@@ -1,1 +1,0 @@
-This is an example of file to show the effect of git clone.
