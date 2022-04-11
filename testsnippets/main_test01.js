@@ -1,6 +1,6 @@
 "use strict"
 
-// function to compute distances
+// add function to compute distances here
 
 let distances = [4, 2, 5, 1, 3]
 distances.sort(function(a, b) {
