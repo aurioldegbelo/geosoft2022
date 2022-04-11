@@ -1,8 +1,7 @@
-
 // Deklaration: Name und Typ der Variable anzugeben
 
 //var a = 10 // initialisierung
-
+/*
 "use strict"
 
 var initialized = 10
@@ -21,14 +20,11 @@ var v = null
 console.log(typeof(u))
 console.log(typeof(v))
 
-/*
+
 let a
 a = 10 
 console.log(a)
 
-*/
-
-/*
 var a = 10 
 
 var a = 15 
