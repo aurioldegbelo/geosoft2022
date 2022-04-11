@@ -3,3 +3,14 @@ ul {
     text-align: center
 }
 
+p{
+    color: red
+}
+
+#unique
+{
+    color: blue
+
+}
+
+/* see all CSS selectors at https://www.w3schools.com/cssref/css_selectors.asp*/
