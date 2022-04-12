@@ -3,9 +3,12 @@
 // add function to compute distances here
 
 let distances = [4, 2, 5, 1, 3]
+/*
 distances.sort(function(a, b) {
   return a - b
 })
+*/
+distances.sort((a, b) => a - b)
 
 let txt = " Distances sorted from small to large: <br/>"
 for (let i in distances) {
