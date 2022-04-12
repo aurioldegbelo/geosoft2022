@@ -1,6 +1,7 @@
 // Deklaration: Name und Typ der Variable anzugeben
 
 //var a = 10 // initialisierung
+/*
 
 "use strict"
 
@@ -37,3 +38,5 @@ let b = 20
 let b = 40
 
 console.log(b)
+
+*/
