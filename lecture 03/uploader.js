@@ -4,6 +4,7 @@ let uploaddiv = document.getElementById("uploadform")
 let picturesdiv = document.getElementById("pictures")
 let uploadfield = document.getElementById("uploadfield")
 
+
 /**
  * 
  * Event listener for the uploadfield element that is used to help users upload new files
