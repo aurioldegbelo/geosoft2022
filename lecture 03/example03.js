@@ -39,7 +39,7 @@ console.log(namedF(a))
 
 let pod = function (examplefunction)
 {
-    console.log(examplefunction)
+    //console.log(examplefunction)
     examplefunction()
 }
 
@@ -47,7 +47,13 @@ let cast = function ()
 {
     console.log("End of the podcast") 
 }
-pod(cast)
+console.log(pod) // pod is a function
+console.log(cast) // cast is a function
+console.log(pod(cast)) // pod(cast) returns undefined
+
+setTimeout(pod(cast), 5000) // Hint: setTimeout is expecting a function to run
+
+
 /*
 var executeSomething = function ()  // var/let functionExpressionName 
 {
@@ -66,7 +72,6 @@ console.dir(executeSomething2)
 
 executeSomething2()
 */
-setTimeout(pod(cast), 5000)
 
 
 /*
