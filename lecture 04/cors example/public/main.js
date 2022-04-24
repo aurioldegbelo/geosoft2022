@@ -33,6 +33,6 @@ pictures.forEach ((value, key) => {
     console.log("%o", key, value)
 
     // dom manipulation
-    document.getElementById(key).innerText = `${value.poi}, ${value.city}`
+    document.getElementById(key).innerText = `${value.poiname}, ${value.cityname}`
     document.getElementById(key).href = value.link
 })
