@@ -100,13 +100,13 @@ class Picture {
         console.log(`Showing the picture ${this.poiname}`)
     }
 
-    static hello()
+    static saySomething()
     {
-        console.log("Hello") // Hello
+        console.log("I am a picture") // I am a picture
     }
 }
 
-Picture.hello()
+Picture.saySomething()
 
 // instance
 const pic1 = new Picture1("Prinzipalmarkt", "Münster", "https://flic.kr/p/4kbwjN")
