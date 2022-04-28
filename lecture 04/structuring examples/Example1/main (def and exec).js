@@ -26,6 +26,7 @@ function user_interface_update()
 
 
 
+
 // function definition (names following the camel case convention)
 
 function dataReading()
@@ -48,5 +49,17 @@ function userInterfaceUpdate()
     /* I show the results of my data processing to users */
 
     document.getElementById("mySecondHtmlElement").innerHTML= "Here are my results from the camel case scenario"
+}
+
+// Execution
+
+
+
+
+window.onload = function ()
+{   
+  user_interface_update()
+  userInterfaceUpdate()  
+  console.log("test test") 
 }
 
