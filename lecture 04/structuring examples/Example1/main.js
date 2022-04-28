@@ -1,6 +1,6 @@
 // function definition (names following the underscore convention)
 
-function data_reading())
+function data_reading()
 {
     /* I read data, e.g. from a file, from an formular, from an api */
 
