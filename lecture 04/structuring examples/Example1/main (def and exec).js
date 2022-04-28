@@ -1,3 +1,5 @@
+"use strict"; 
+
 // function definition (names following the underscore convention)
 
 function data_reading()
@@ -18,7 +20,7 @@ function user_interface_update()
 {
 
     /* I show the results of my data processing to users */
-    
+
     document.getElementById("my_first_html_element").innerHTML= "Here are my results from the underscore scenario"
 }
 

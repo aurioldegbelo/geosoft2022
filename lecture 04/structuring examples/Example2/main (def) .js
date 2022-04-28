@@ -1,3 +1,6 @@
+
+"use strict"; 
+
 // function definition (names following the underscore convention)
 
 function data_reading()
