@@ -2,7 +2,7 @@
 
 function data_reading()
 {
-    /* I read data, e.g. from a file, from an formular, from an api */
+    /* I read data, e.g. from a file, from a formular, from an api */
 
 }
 
@@ -10,7 +10,7 @@ function data_reading()
 function data_processing()
 {
 
-    /* I process the data that is read */
+    /* I process the data that was read and do cool stuff with it */
 
 }
 
@@ -23,11 +23,12 @@ function user_interface_update()
 
 
 
+
 // function definition (names following the camel case convention)
 
 function dataReading()
 {
-    /* I read data, e.g. from a file, from an formular, from an api */
+    /* I read data, e.g. from a file, from a formular, from an api */
 
 }
 
@@ -35,18 +36,15 @@ function dataReading()
 function dataProcessing()
 {
 
-    /* I process the data that is read */
+    /* I process the data that was read and do cool stuff with it */
 
 }
 
 function userInterfaceUpdate()
 {
+    /* I show the results of my data processing to users */
 
     document.getElementById("mySecondHtmlElement").innerHTML= "Here are my results from the camel case scenario"
 }
 
 
-
-// function execution
-
-user_interface_update()
