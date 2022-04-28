@@ -6,48 +6,20 @@
 function data_reading()
 {
     /* I read data, e.g. from a file, from a formular, from an api */
-
+    return 2
 }
 
 
-function data_processing()
+function data_processing(inputdata)
 {
 
     /* I process the data that was read and do cool stuff with it */
-
+    return 10 * inputdata
 }
 
-function user_interface_update()
+function user_interface_update(inputdata)
 {
 
     /* I show the results of my data processing to users */
-    document.getElementById("my_first_html_element").innerHTML= "Here are my results from the underscore scenario"
+    document.getElementById("my_first_html_element").innerHTML= `The value of the processing is ${inputdata}`
 }
-
-
-
-
-// function definition (names following the camel case convention)
-
-function dataReading()
-{
-    /* I read data, e.g. from a file, from a formular, from an api */
-
-}
-
-
-function dataProcessing()
-{
-
-    /* I process the data that was read and do cool stuff with it */
-
-}
-
-function userInterfaceUpdate()
-{
-    /* I show the results of my data processing to users */
-
-    document.getElementById("mySecondHtmlElement").innerHTML= "Here are my results from the camel case scenario"
-}
-
-
