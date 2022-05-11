@@ -24,7 +24,7 @@ function showDetailsOnMap(details, mymap)
 
         // add a marker
         var marker = L.marker([lat, long]).addTo(mymap)
-        let text = `<a href="${currentpoi.properties.link}"><img src="${currentpoi.properties.link2}" width="320" height="175"></a>`
+        let text = `<a href="${currentpoi.properties.link}"><img src="${currentpoi.properties.jpg_link}" width="320" height="175"></a>`
         
         // add the picture to the current popup
         console.log(text)
@@ -123,7 +123,7 @@ window.onload = function ()
   }
   ]
     }
-    
+
     // create a variable for the map
     let mymap = L.map('myfirstmap',
         {
@@ -178,7 +178,5 @@ window.onload = function ()
         }
     })
 
-    
-    
 
 }
