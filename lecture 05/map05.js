@@ -141,6 +141,7 @@ window.onload = function ()
         accessToken: myMapBoxKey
     }).addTo(mymap)
 
+   
     // retrieve the pictures
     let pictures = geojson.features
     //console.log(pictures)
