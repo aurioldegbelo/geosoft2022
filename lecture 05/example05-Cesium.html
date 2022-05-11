@@ -11,6 +11,8 @@
      <!-- Include the CesiumJS JavaScript and CSS files -->
     <script src="https://cesium.com/downloads/cesiumjs/releases/1.80/Build/Cesium/Cesium.js"></script>
     <link href="https://cesium.com/downloads/cesiumjs/releases/1.80/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
+    <!-- Include Cesium Access Token -->
+    <script src="apiKeys.js"></script>
     <style>
         html, body, #cesiumContainer {
             width: 100%;
@@ -20,6 +22,7 @@
             overflow: hidden;
         }
     </style>
+ 
 
 </head>
 <body>
@@ -29,6 +32,8 @@
 
 
     <script>
+
+        Cesium.Ion.defaultAccessToken = myCesiumAccessToken
 
         let viewer = new Cesium.Viewer("cesiumContainer")
 
@@ -43,7 +48,7 @@
     "poiname": "Prinzipalmarkt",
     "cityname": "Münster", 
     "link": "https://flic.kr/p/4kbwjN", 
-    "link2": "https://live.staticflickr.com/2288/2186136858_214f8685f2_n.jpg" }
+    "description": "<img src='https://live.staticflickr.com/2288/2186136858_214f8685f2_n.jpg'>" }
     },
     { "type": "Feature",
     "geometry": {"type": "Point", "coordinates": [7.596000123049237, 51.96910828669141]},
