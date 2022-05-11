@@ -4,7 +4,7 @@
 function showDetailsAsJSON(details)
     {
   
-        let text = `The current selection is: <br> POI Name: ${details[0].properties.poiname}, City Name:  ${details[0].properties.cityname}, Link:  <a href=" ${details[0].properties.link}"> ${details[0].properties.link}</a> `   
+        let text = `The current selection is { POI Name: ${details[0].properties.poiname}, City Name:  ${details[0].properties.cityname}, Link:  <a href=" ${details[0].properties.link}"> ${details[0].properties.link}</a> }`   
         console.log(text)
         // pass the information about the current poi to the HTML information element
         document.getElementById("information").innerHTML = text
@@ -125,6 +125,9 @@ window.onload = function ()
   ]
     }
    
+    const data = require('./pictures2.geojson');
+    console.log(data);
+
     // create a variable for the map
     let mymap = L.map('myfirstmap',
         {
