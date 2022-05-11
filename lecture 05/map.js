@@ -127,6 +127,7 @@ window.onload = function ()
     // create a variable for the map
     let mymap = L.map('myfirstmap',
         {
+            center: [51.961563, 7.628202],
             zoom: 13
         }) 
     
