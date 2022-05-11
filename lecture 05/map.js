@@ -3,7 +3,8 @@
 // function definition
 function showDetailsAsJSON(details)
     {
-        let text = `The current selection is: <br> <br> POI Name: ${details[0].properties.poiname}, City Name:  ${details[0].properties.cityname}, Link:  <a href=" ${details[0].properties.link}"> ${details[0].properties.link}</a> `   
+  
+        let text = `The current selection is: <br> POI Name: ${details[0].properties.poiname}, City Name:  ${details[0].properties.cityname}, Link:  <a href=" ${details[0].properties.link}"> ${details[0].properties.link}</a> `   
         console.log(text)
         // pass the information about the current poi to the HTML information element
         document.getElementById("information").innerHTML = text
