@@ -18,9 +18,8 @@ function showDetailsOnMap(details, mymap)
         // geojson uses long/lat as ordering
         let [long, lat]= currentpoi.geometry.coordinates
         
-        if (mymap != undefined || mymap != null) {mymap.remove() }
-
-        // leaflet uses lat/long
+        //if (mymap != undefined || mymap != null) {mymap.remove() }
+        mymap.setView([lat, long], 13) // leaflet uses lat/long
 
         // add a marker
         var marker = L.marker([lat, long]).addTo(mymap)
