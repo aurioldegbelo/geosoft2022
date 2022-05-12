@@ -19,7 +19,6 @@ function showDetailsOnMap(details, mymap)
         // geojson uses long/lat as ordering
         let [long, lat]= currentpoi.geometry.coordinates
         
-        //if (mymap != undefined || mymap != null) {mymap.remove() }
         mymap.setView([lat, long], 13) // leaflet uses lat/long
 
         // add a marker
@@ -123,7 +122,8 @@ window.onload = function ()
   }
   ]
     }
-
+  
+    
     // create a variable for the map
     let mymap = L.map('myfirstmap',
         {
@@ -131,6 +131,7 @@ window.onload = function ()
             zoom: 13
         }) 
     
+          
     // add the base map
     L.tileLayer(`https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=${myMapBoxKey}`, {
         attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -140,7 +141,6 @@ window.onload = function ()
         zoomOffset: -1,
         accessToken: myMapBoxKey
     }).addTo(mymap)
-
    
     // retrieve the pictures
     let pictures = geojson.features
