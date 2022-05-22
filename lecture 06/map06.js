@@ -1,26 +1,6 @@
 "use strict"; 
 
 // function definition
-function showDetailsOnMap(details, mymap)
-{
-        // get the current poi
-        let currentpoi = details[0]
-
-        // geojson uses long/lat as ordering
-        let [long, lat]= currentpoi.geometry.coordinates
-        
-        mymap.setView([lat, long], 13) // leaflet uses lat/long
-
-        // add a marker
-        var marker = L.marker([lat, long]).addTo(mymap)
-        let text = `<a href="${currentpoi.properties.link}"><img src="${currentpoi.properties.jpg_link}" width="320" height="175"></a>`
-        
-        // add the picture to the current popup
-        console.log(text)
-        marker.bindPopup(text).openPopup()
-    
-}
-
 
 function showDetailsAsCard(details)
 {
@@ -101,6 +81,19 @@ function showDetailsOnMap(details, mymap)
 // execution of functions when the DOM has loaded
 window.onload = function ()
 {
+
+    // change the background color of the navbar
+    let colorelement = document.getElementById("color")
+    colorelement.addEventListener("input", () => 
+    {
+      //console.log(colorelement.value)
+      let cols = document.getElementsByClassName('navbar-custom')
+      //console.dir(cols)
+      cols[0].style.backgroundColor = colorelement.value
+
+    })
+
+
 
 // geojson file about the pictures
     let geojson = { 
