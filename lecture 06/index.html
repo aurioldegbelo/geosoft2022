@@ -11,22 +11,24 @@
     <button onclick=end()>END</button>
 
     <script>
+    // The trace() method displays a trace that show how the code ended up at a certain point.
+    // https://www.w3schools.com/jsref/met_console_trace.asp
 
-    function end()
+    function end() // defining the function
     {
-        function pod() 
+        function pod() // defining the function
         {
-            function cast() 
+            function cast() // defining the function 
             {
                 console.log("This is the end of the podcast 06")
                 console.trace()
             }
 
-            cast()
+            cast() // executing the function
         }
-        pod()
+        pod() // executing the function
     }
-    end()
+    end() // executing the function
 
     </script>
 
