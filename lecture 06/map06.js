@@ -34,7 +34,7 @@ async function nearbyPlaces (currentpoi)
 
   let dataurl = `https://places.ls.hereapi.com/places/v1/discover/explore?at=${lat}%2C${long}&cat=sights-museums&apiKey=${myHereAPIKey}`
 
-  let res = await  fetch(dataurl)
+  let res = await fetch(dataurl)
   let data = await res.json()
  // console.log(data) 
 
