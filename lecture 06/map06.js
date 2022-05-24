@@ -86,13 +86,10 @@ window.onload = function ()
     let color_selector = document.getElementById("color_selector")
     color_selector.addEventListener("input", () => 
     {
-      // pick the navbar      
-      //let cols = document.getElementsByClassName('navbar-custom')
-      
-      // update the color of the navbar
-      //cols[0].style.backgroundColor = colorelement.value
-
+      // pick the navbar  
       let navbar = document.getElementById("myfirstnavbar")
+         
+      // update the color of the navbar
       navbar.style.backgroundColor = color_selector.value
 
     })
