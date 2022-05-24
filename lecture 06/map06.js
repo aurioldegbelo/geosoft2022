@@ -82,15 +82,14 @@ function showDetailsOnMap(details, mymap)
 window.onload = function ()
 {
 
-    // change the background color of the navbar
+    // change the background color of the document
     let color_selector = document.getElementById("color_selector")
     color_selector.addEventListener("input", () => 
     {
-      // pick the navbar  
-      let navbar = document.getElementById("myfirstnavbar")
-         
-      // update the color of the navbar
-      navbar.style.backgroundColor = color_selector.value
+       
+      console.log(color_selector.value)
+      // update the color of the document's background
+      document.body.style.backgroundColor = color_selector.value
 
     })
 
