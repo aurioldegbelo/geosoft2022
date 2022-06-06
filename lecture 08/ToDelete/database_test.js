@@ -40,7 +40,6 @@ async function run ()
         { name: 'Viola', address: 'Sideway 1633'}
       ]
 
-
       // insert new documents in my collection
      //insertDocuments(collection, data)
 
@@ -57,7 +56,6 @@ run()
 
 
 /* Definition of the different functions starting here */
-
 
 // function to insert documents in the collection
 // adapted from https://www.mongodb.com/docs/drivers/node/current/usage-examples/insertMany/
