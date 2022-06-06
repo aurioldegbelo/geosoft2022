@@ -41,7 +41,7 @@ async function run ()
       ]
 
       // insert new documents in my collection
-     //insertDocuments(collection, data)
+     insertDocuments(collection, data)
 
      countRows (collection)
 
