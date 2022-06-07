@@ -1,19 +1,22 @@
 {
   "name": "lecture-07",
   "version": "1.0.0",
-  "description": "This is my first package",
+  "description": "This is an example of node project",
   "main": "demoserver.js",
   "scripts": {
-    "test": "node storageserver.js", 
+    "test": "node node_cli_demo.js", 
     "start": "node demoserver.js"
   },
   "keywords": [
-    "101",
-    "\"myfirstpackage\""
+    "\"keyword",
+    "1\"",
+    "\"keyword",
+    "2\"",
+    "\"node",
+    "js\"",
+    "\"live",
+    "demo\""
   ],
   "author": "Auriol Degbelo",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.17.1"
-  }
+  "license": "ISC"
 }

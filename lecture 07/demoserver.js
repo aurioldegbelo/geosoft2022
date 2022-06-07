@@ -1,11 +1,11 @@
 
 // basic version
 let http = require('http') // use an existing module from node
-let host = "localhost" // 127.0.0.1
-let port = 1234
-
 
 let server = http.createServer(handleRequest) // create a server
+
+let host = "localhost" // 127.0.0.1
+let port = 1234
 
 server.listen(port, host) // say where the server should listen
 
@@ -17,7 +17,7 @@ function handleRequest (request, res)
     if(request.url === "/")
     {
         res.writeHead(200, {'Content-Type': 'text/html'})
-        res.write ("We are on the main page")
+        res.write ("We are on the main page. This is test. This is another test.")
         res.end()
 
     } else if (request.url === "/index.html")
@@ -34,9 +34,9 @@ function handleRequest (request, res)
     }
 }
 
+
 console.log(`Server is running on ${host}:${port}`)
 
-/*
 
 
 
