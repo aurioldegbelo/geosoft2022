@@ -51,9 +51,6 @@ async function run ()
 }
 run()
 
-   
-  
-
 
 /* Definition of the different functions starting here */
 
