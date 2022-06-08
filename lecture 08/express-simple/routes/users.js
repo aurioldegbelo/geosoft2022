@@ -5,7 +5,7 @@ var router = express.Router();
 router.get('/', function(req, res, next) 
 {
   //res.send('respond with a resource');
-  res.render('users', { title: 'Users Page', subtitle: 'A Cool Subtitle', key: 'A variable named key' });
+  res.render('users', { title: 'Users Page', subtitle: 'No user for now', key: 'key-name' });
 
 });
 
