@@ -2,7 +2,7 @@
 
 var express = require('express')
 var app = express()
-const port = 6000
+const port = 5000
 
 
 var myLogger = function (req, res, next) 
@@ -17,8 +17,8 @@ var mySecondLogger = function (req, res, next)
   next()
 }
 
-app.use(myLogger)
 app.use(mySecondLogger)
+app.use(myLogger)
 
 
 app.get('/', function (req, res) 
