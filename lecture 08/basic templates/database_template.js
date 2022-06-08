@@ -45,6 +45,7 @@
        // insert new documents in my collection
         insertDocuments(collection, data)
    
+        // count the number of rows in the collection
         countRows (collection)
    
         // find documents 
