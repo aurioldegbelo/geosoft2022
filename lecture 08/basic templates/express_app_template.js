@@ -30,10 +30,11 @@ app.get('/', (req, res) =>
   res.send('Hello World!')
 })
 
+
 // serve static files
 // function taken from https://expressjs.com/de/starter/static-files.html 
-app.use(express.static('public'))
-//app.use('/static', express.static('public'))
+//app.use(express.static('public'))
+app.use('/static', express.static('public'))
 //app.use('/static', express.static(path.join(__dirname, 'public')))
 //console.log(__dirname) // __dirname tells you the absolute path of the directory containing the currently executing file
 //console.log(path.join(__dirname, 'public'))
