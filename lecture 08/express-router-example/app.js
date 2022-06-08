@@ -13,8 +13,11 @@ app.get('/', (req, res) =>
   res.send('hello world')
 })
 
-app.use('/route_using_router', birds)
+// use a router instance
+app.use('/first_route_using_router', birds)
 
+// use a router instance (we can use a rouer instance multiple times, i.e define several routes that point at the same instance)
+app.use('/second_route_using_router', birds)
 
 
 app.listen(port, () => 
