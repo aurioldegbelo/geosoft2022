@@ -4,11 +4,13 @@ const express = require('express')
 const app = express()
 const port = 3000
 
+// function taken from https://expressjs.com/de/starter/hello-world.html
 app.get('/', (req, res) => 
 {
   res.send('Hello World!')
 })
 
+// function taken from https://expressjs.com/de/starter/static-files.html 
 app.use(express.static('public'))
 //app.use('/static', express.static('public'))
 //app.use('/static', express.static(path.join(__dirname, 'public')))
