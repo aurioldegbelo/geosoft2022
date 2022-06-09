@@ -1,5 +1,17 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  header
+    // add a bootstrap navbar
+    // Documentation about navbars at https://getbootstrap.com/docs/5.2/components/navbar/
+  nav#myfirstnavbar.navbar.navbar-expand-md.navbar-dark.bg-primary.mb-4
+      .container-fluid
+        a.navbar-brand(href='#')= title
+        i.bi.bi-camera.me-3
+        button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarCollapse' aria-controls='navbarCollapse' aria-expanded='false' aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+  
+block foot 
+  footer
+  .navbar.navbar-expand-md.fixed-bottom.bg-primary.justify-content-center
+    span.text-white This is a simple example of footer.
