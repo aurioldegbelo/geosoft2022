@@ -18,6 +18,7 @@ router.post('/newpoi', function(req, res, next)
   poi.coordinates = req.body.longlat
   poi.link = req.body.picurl
 
+  res.render('add_notification', {title: "Addition Completed", data:poi})
 })
 
 
