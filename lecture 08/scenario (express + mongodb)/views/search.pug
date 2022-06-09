@@ -1,5 +1,20 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+               // add a color picker
+          p
+            label(for="color_selector") Pick a color
+            input(type="color", id="color_selector", title="Choose your color")
+        .row.mb-5
+          // first column: add an information card from bootstrap
+          .col
+            #information.card
+              .card-body
+                h5.card-title Card title
+                h6.card-subtitle.mb-2.text-muted Card subtitle
+                p.card-text Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+                a.card-link(href="#") Card link
+          // second column: div to show the map
+          .col
+            // Div to show the map
+            #myfirstmap

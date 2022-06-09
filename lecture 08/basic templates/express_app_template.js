@@ -41,7 +41,13 @@ app.get('/', (req, res) =>
 //console.log(__dirname) // __dirname tells you the absolute path of the directory containing the currently executing file
 //console.log(path.join(__dirname, 'public'))
 
-
+// redirection of the basic path to the html page used as an entry point for the static website
+/*
+app.get('/', (req, res) => 
+{
+    res.redirect('/example06.html')
+})
+*/
 
 
 app.listen(port, () => 
