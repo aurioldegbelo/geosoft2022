@@ -1,6 +1,9 @@
 extends layout
 
+
 block scripts
+  script.
+    let geojson = !{JSON.stringify(data)}
   // Loading the API Keys (Mapbox and Here)
   script(src="/javascripts/apiKeys.js")
   script(src="/javascripts/map06.js")
