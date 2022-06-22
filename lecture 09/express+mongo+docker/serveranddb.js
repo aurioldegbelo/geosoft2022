@@ -8,8 +8,8 @@ const mongodbOptions = {
 const app = express() // create express app
 const port = 3000
 
-const url = 'mongodb://localhost:27017' // connection URL (mongodb localhost)
-//const url = 'mongodb://mongo:27017' // connection URL (mongodb docker container)
+//const url = 'mongodb://localhost:27017' // connection URL (mongodb localhost)
+const url = 'mongodb://mongo:27017' // connection URL (mongodb docker container)
 
 const client = new MongoClient(url, mongodbOptions) // mongodb client
 const dbName = 'mydb' // database name
@@ -37,7 +37,7 @@ app.get('/insert', async (req, res) =>
   addDocumentsToDB(client, dbName, collectionName, data)
   .then(console.log)
   .catch(console.error)
-  .finally(() => setTimeout(() => {client.close()}, 1500)) // closed the database after 1,5 seconds
+  .finally(() => setTimeout(() => {client.close()}, 1500)) // close the database after 1,5 seconds
 
   res.send("Some data has been added to the database")
 

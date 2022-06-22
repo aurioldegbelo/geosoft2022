@@ -10,11 +10,13 @@ services:
         depends_on: 
             - mongoservice
     mongoservice:
-        container_name: mongo
-        image: mongo
+        container_name: mongo 
+        image: mongo # image retrieved from docker hub
         ports:
             - '27017:27017'
     mongoexpressservice: 
-        image: mongo-express
+        image: mongo-express # image retrieved from docker hub
         ports: 
             - '8081:8081'
+        depends_on: 
+            - mongoservice
