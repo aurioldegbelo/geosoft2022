@@ -37,7 +37,7 @@ app.get('/insert', async (req, res) =>
   addDocumentsToDB(client, dbName, collectionName, data)
   .then(console.log)
   .catch(console.error)
-  .finally(() => setTimeout(() => {client.close()}, 1500)) // close the database after 1,5 seconds
+  //.finally(() => setTimeout(() => {client.close()}, 1500)) // close the database after 1,5 seconds
 
   res.send("Some data has been added to the database")
 
