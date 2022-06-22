@@ -1,4 +1,4 @@
-Getting started with docker: example of commands
+Getting started with docker (some example of commands)
 
 docker search hello-word
 docker pull [official image]
