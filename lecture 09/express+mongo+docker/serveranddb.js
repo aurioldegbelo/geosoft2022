@@ -8,7 +8,6 @@ const mongodbOptions = {
 const app = express() // create express app
 const port = 3000
 
-
 const url = 'mongodb://localhost:27017' // connection URL (mongodb localhost)
 //const url = 'mongodb://mongo:27017' // connection URL (mongodb docker container)
 
