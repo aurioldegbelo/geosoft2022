@@ -4,9 +4,9 @@ services:
     appservice: 
         container_name: myfotoapp
         #build: .
-        image: aurioldegbelo/myfotoapp2022
+        image: aurioldegbelo/my-foto-app-2022
         ports: 
-            - '4000:3000'
+            - '5000:3000'
         depends_on: 
             - mongoservice
     mongoservice:
