@@ -43,7 +43,7 @@ async function addNewPOItoDB(client, dbName, collectionName, poi, res)
 
   await client.connect()
 
-  console.log('Connected successfully to server')
+  console.log('Connected successfully to the database')
 
   const db = client.db(dbName)
 

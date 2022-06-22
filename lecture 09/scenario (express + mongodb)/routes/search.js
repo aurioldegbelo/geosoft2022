@@ -27,7 +27,7 @@ async function retrieveAllPOIsfromDB(client, dbName, collectionName, res)
 {
 
   await client.connect()
-  console.log('Connected successfully to server')
+  console.log('Connected successfully to the database')
 
   const db = client.db(dbName)
 
@@ -38,7 +38,7 @@ async function retrieveAllPOIsfromDB(client, dbName, collectionName, res)
   const results = await cursor.toArray()
 
   // get the geojson object (because toArray has generated an array)
-  console.log(results[0])
+  console.log("POIs from the database", results[0])
 
   // pass the results data as input for the search page
   res.render('search', { title: 'Searching Page', data: results[0] });
