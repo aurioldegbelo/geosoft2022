@@ -1,16 +1,18 @@
 
 const express = require('express')
-const MongoClient = require('mongodb').MongoClient
-const assert = require('assert')
+const { MongoClient } = require('mongodb')
 
 const app = express() // create express app
 const port = 3000
 
-//const url = 'mongodb://localhost:27017' // connection URL
-const url = 'mongodb://mongo:27017' // connection URL
-const client = new MongoClient(url) // create mongodb client
+
+const url = 'mongodb://localhost:27017' // connection URL (mongodb localhost)
+//const url = 'mongodb://mongo:27017' // connection URL (mongodb docker container)
+
+const client = new MongoClient(url) // mongodb client
 const dbName = 'mydb' // database name
 const collectionName = 'test' // collection name
+
 
 // first route
 app.get('/', (req, res) => 
@@ -19,41 +21,24 @@ app.get('/', (req, res) =>
 })
 
 // second route
-app.get('/insert', (req, res) => 
+app.get('/insert', async (req, res) => 
 {
 
-  // Use connect method to connect to the server
-  client.connect(function(err) 
-  {
-
-    assert.equal(null, err)
-    console.log('Connected successfully to server')
-    const db = client.db(dbName)
-    const collection = db.collection(collectionName)
-    
     // Some data
-    const data = [
-        { name: 'Mary', address: 'Beststreet 1, Münster'},
-        { name: 'Max', address: 'Beautifulstreet 4, Münster'},
-        { name: 'Peter', address: 'Apple st 652'},
-        { name: 'Hannah', address: 'Mountain 21'}
-    ]
+  const data = [
+      { name: 'Mary', address: 'Beststreet 1, Münster'},
+      { name: 'Max', address: 'Beautifulstreet 4, Münster'},
+      { name: 'Peter', address: 'Apple st 652'},
+      { name: 'Hannah', address: 'Mountain 21'}
+  ]
 
-    // Insert data in the collection
-    collection.insertMany(data, function(err, result) 
-    {
-      assert.equal(err, null)
-      assert.equal(1, result.result.ok)
-      //console.log(result)
-      console.log(`Inserted ${result.insertedCount} documents into the collection`)
-     
-    })
+  addDocumentsToDB(client, dbName, collectionName, data)
+  .then(console.log)
+  .catch(console.error)
+  .finally(() => setTimeout(() => {client.close()}, 1500))
 
-    client.close()
+  res.send("Some data has been added to the database")
 
-    res.send('Some data has been added to the database!')
-
-  })
 })
 
 
@@ -61,4 +46,24 @@ app.listen(port, () =>
 {
   console.log(`App listening at http://localhost:${port}`)
 })
+
+
+/* Template to add to and retrieve documents from a MongoDB database
+   The template is adapted from https://www.mongodb.com/docs/drivers/node/current/quick-start/ and 
+   https://www.npmjs.com/package/mongodb 
+ */
+async function addDocumentsToDB (client, dbName, collectionName, data) 
+{
+
+    await client.connect()
+    console.log('Connected successfully to database')
+
+    const db = client.db(dbName)
+    const collection = db.collection(collectionName)
+
+    const options = { ordered: true }
+    const result = await collection.insertMany(data, options)
+    console.log(`${result.insertedCount} documents were inserted in the collection`)
+
+}
 

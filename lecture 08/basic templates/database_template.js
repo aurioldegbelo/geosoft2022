@@ -1,5 +1,5 @@
 /* Template to add to and retrieve documents from a MongoDB database
-   The template is adapte from https://www.mongodb.com/docs/drivers/node/current/quick-start/ and 
+   The template is adapted from https://www.mongodb.com/docs/drivers/node/current/quick-start/ and 
    https://www.npmjs.com/package/mongodb 
 
  */
