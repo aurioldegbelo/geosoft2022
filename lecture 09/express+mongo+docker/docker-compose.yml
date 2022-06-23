@@ -16,10 +16,6 @@ services:
             - '27017:27017'
         volumes:
             - ./mongo-init/:/docker-entrypoint-initdb.d/:ro
-        #volumes: 
-         #  - ./mongo-volume:/data/db
-        #volumes:
-         #   - mongodata:/data/db
     mongoexpressservice: 
         image: mongo-express # image retrieved from docker hub
         restart: always
@@ -27,5 +23,3 @@ services:
             - '8081:8081'
         depends_on: 
             - mongoservice
-#volumes:
-#    mongodata:
