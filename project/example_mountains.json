@@ -29,7 +29,6 @@
         "properties": {
           "name": "Grossglockner",
           "altitude": 3798,
-          "country": "Austria",
           "url": "https://en.wikipedia.org/wiki/Grossglockner", 
           "description": ""
         }
