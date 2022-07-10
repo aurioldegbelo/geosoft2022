@@ -1,0 +1,78 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -5.34296,
+            36.14363
+          ]
+        },
+        "properties": {
+          "name": "The Rock of Gibraltar",
+          "altitude": 426,
+          "url": "https://en.wikipedia.org/wiki/Rock_of_Gibraltar",
+          "description": ""
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            12.694,
+            47.0744
+          ]
+        },
+        "properties": {
+          "name": "Grossglockner",
+          "altitude": 3798,
+          "country": "Austria",
+          "url": "https://en.wikipedia.org/wiki/Grossglockner", 
+          "description": ""
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  21.265497207641598,
+                  69.30795043076344
+                ],
+                [
+                  21.26429557800293,
+                  69.30781395501799
+                ],
+                [
+                  21.264338493347168,
+                  69.30603969200611
+                ],
+                [
+                  21.272449493408203,
+                  69.30613068339132
+                ],
+                [
+                  21.27279281616211,
+                  69.30799592248732
+                ],
+                [
+                  21.265497207641598,
+                  69.30795043076344
+                ]
+              ]
+            ]
+        },
+        "properties": {
+          "name": "Haltiatunturi",
+          "altitude": 1365,
+          "url": "https://en.wikipedia.org/wiki/Halti",
+          "description": " "
+        }
+      }
+    ]
+  }
